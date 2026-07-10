@@ -30,7 +30,7 @@ function About() {
 
           <h3>
             Computer Science Graduate &
-            <span> Python Developer</span>
+            <span> Backend Developer</span>
           </h3>
 
           <p>
@@ -47,17 +47,17 @@ function About() {
           </p>
 
           <p>
-            Through personal projects and continuous practice,
-            I've built REST APIs, full-stack web applications,
-            AI-powered solutions and database-driven systems that
-            strengthened both my development and problem-solving
-            skills.
+            Most recently, I worked as a <strong>Python Development
+            Intern at Sify Digital Services</strong>, where I built
+            REST APIs and Django ORM models, wrote views and
+            serializers for business logic, and collaborated with
+            the team using Agile practices.
           </p>
 
           <p>
-            Alongside development, I actively solve Data Structures
-            and Algorithms problems to improve logical thinking and
-            prepare for technical interviews.
+            Beyond development, I've solved 600+ DSA problems on
+            LeetCode and GeeksforGeeks to sharpen my problem-solving
+            skills and prepare for technical interviews.
           </p>
 
           <div className="about-highlights">
@@ -100,15 +100,59 @@ function About() {
 
         <div className="about-right">
 
-          <div className="info-card">
+          <div className="info-card wide timeline-card">
 
-            <h2>10+</h2>
+            <h3>My Journey</h3>
 
-            <span>Projects Built</span>
+            <ul className="timeline">
+
+              <li>
+                <span className="timeline-dot" />
+                <div>
+                  <strong>B.E. Computer Science</strong>
+                  <span className="timeline-date">2022 – 2026</span>
+                </div>
+              </li>
+
+              <li>
+                <span className="timeline-dot" />
+                <div>
+                  <strong>Live Project Intern — Vivnovation Pvt Ltd</strong>
+                  <span className="timeline-date">Jan 2025 – Mar 2025</span>
+                </div>
+              </li>
+
+              <li>
+                <span className="timeline-dot" />
+                <div>
+                  <strong>Python Development Intern — Sify Digital Services</strong>
+                  <span className="timeline-date">Jan 2026 – Apr 2026</span>
+                </div>
+              </li>
+
+              <li className="timeline-current">
+                <span className="timeline-dot" />
+                <div>
+                  <strong>Now: Looking For Full-Time Roles</strong>
+                  <span className="timeline-date">
+                    Software Developer • Backend Developer • Python Developer
+                  </span>
+                </div>
+              </li>
+
+            </ul>
 
           </div>
 
-          <div className="info-card">
+          <div className="info-card compact">
+
+            <h2>2</h2>
+
+            <span>Internships Completed</span>
+
+          </div>
+
+          <div className="info-card compact">
 
             <h2>600+</h2>
 
@@ -116,30 +160,19 @@ function About() {
 
           </div>
 
-          <div className="info-card">
+          <div className="info-card compact">
 
-            <h2>300+</h2>
+            <h2>8.61</h2>
 
-            <span>Day GFG Streak</span>
+            <span>CGPA</span>
 
           </div>
 
-          <div className="info-card">
+          <div className="info-card compact">
 
             <h2>2026</h2>
 
             <span>B.E. CSE Graduate</span>
-
-          </div>
-
-          <div className="info-card wide">
-
-            <h3>Currently Looking For</h3>
-
-            <p>
-              Python Developer • Backend Developer •
-              Software Engineer
-            </p>
 
           </div>
 

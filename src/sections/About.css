@@ -213,6 +213,116 @@
   line-height:1.8;
 }
 
+/* ================= COMPACT STAT CARDS ================= */
+
+.info-card.compact{
+  padding:18px 14px;
+  border-radius:16px;
+}
+
+.info-card.compact h2{
+  font-size:1.7rem;
+  margin-bottom:6px;
+}
+
+.info-card.compact span{
+  font-size:.82rem;
+}
+
+/* ================= TIMELINE CARD ================= */
+
+.timeline-card{
+  text-align:left;
+}
+
+.timeline-card h3{
+  text-align:center;
+}
+
+.timeline{
+  list-style:none;
+  margin:0;
+  padding:0;
+
+  position:relative;
+}
+
+.timeline::before{
+  content:"";
+
+  position:absolute;
+  left:5px;
+  top:6px;
+  bottom:6px;
+
+  width:2px;
+
+  background:linear-gradient(
+    to bottom,
+    #ff5fa2,
+    #b47bff
+  );
+
+  opacity:.4;
+}
+
+.timeline li{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+
+  position:relative;
+
+  padding-bottom:22px;
+}
+
+.timeline li:last-child{
+  padding-bottom:0;
+}
+
+.timeline-dot{
+  flex-shrink:0;
+
+  width:12px;
+  height:12px;
+
+  margin-top:4px;
+
+  border-radius:50%;
+
+  background:#ff5fa2;
+
+  box-shadow:0 0 10px rgba(255,95,162,.6);
+
+  position:relative;
+  z-index:1;
+}
+
+.timeline li div{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.timeline li strong{
+  font-size:.98rem;
+  color:white;
+}
+
+.timeline-date{
+  font-size:.85rem;
+  color:#b8b0c5;
+}
+
+.timeline-current .timeline-dot{
+  background:#b47bff;
+  box-shadow:0 0 14px rgba(180,123,255,.8);
+}
+
+.timeline-current strong{
+  color:#ff5fa2;
+}
+
 /* ================= MOBILE ================= */
 
 @media(max-width:992px){
@@ -298,6 +408,16 @@
 .info-card h2{
 
     font-size:2rem;
+}
+
+.info-card.compact h2{
+
+    font-size:1.5rem;
+}
+
+.timeline li strong{
+
+    font-size:.92rem;
 }
 
 }

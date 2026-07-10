@@ -8,6 +8,7 @@
   min-height: 100vh;
 
   display: flex;
+  justify-content: space-between;
   align-items: center;
 
   padding: 0 10%;
@@ -53,26 +54,15 @@
   pointer-events: none;
 }
 
-/* MAIN LAYOUT */
-
-.hero-container {
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  gap: 60px;
-
-  z-index: 1;
-}
+/* TEXT SIDE */
 
 .hero-content {
   flex: 1;
   max-width: 700px;
-}
 
-/* TEXT */
+  position: relative;
+  z-index: 2;
+}
 
 .hero-name {
   font-size: 5rem;
@@ -172,39 +162,6 @@
   transform: translateY(-4px);
 }
 
-/* IMAGE SECTION */
-
-.hero-image-section {
-  flex: 0.8;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-card {
-  padding: 12px;
-
-  border-radius: 30px;
-
-  background: rgba(255,255,255,0.04);
-
-  border: 1px solid rgba(255,95,162,0.25);
-
-  backdrop-filter: blur(10px);
-
-  box-shadow:
-    0 0 40px rgba(255,95,162,0.15);
-}
-
-.hero-image {
-  width: 360px;
-
-  display: block;
-
-  border-radius: 20px;
-}
-
 /* SCROLL TEXT */
 
 .scroll-indicator {
@@ -227,17 +184,54 @@
   }
 }
 
+/* AVATAR SIDE (desktop default) */
+
+.hero-avatar {
+  position: relative;
+  z-index: 2;
+
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-img {
+  width: 280px;
+  height: 280px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 4px solid rgba(255,95,162,0.5);
+
+  box-shadow:
+    0 0 30px rgba(255,95,162,0.4),
+    0 0 60px rgba(180,123,255,0.2);
+}
+
 /* MOBILE */
 
 @media (max-width: 768px) {
 
   .hero {
+    flex-direction: column;
+    justify-content: center;
+
     padding: 50px 8%;
+
+    text-align: left;
   }
 
-  .hero-container {
-    flex-direction: column;
-    text-align: left;
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .hero-avatar {
+    margin-top: 10px;
   }
 
   .hero-name {
@@ -252,37 +246,8 @@
     font-size: 1rem;
   }
 
-  .hero-image {
-    width: 260px;
+  .avatar-img {
+    width: 220px;
+    height: 220px;
   }
-}
-.hero-content{
-  position: relative;
-  z-index: 2;
-}
-
-.hero-avatar{
-  position: absolute;
-
-  right: 10%;
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  z-index: 2;
-}
-
-.avatar-img{
-  width: 280px;
-  height: 280px;
-
-  border-radius: 50%;
-
-  object-fit: cover;
-
-  border: 4px solid rgba(255,95,162,0.5);
-
-  box-shadow:
-    0 0 30px rgba(255,95,162,0.4),
-    0 0 60px rgba(180,123,255,0.2);
 }

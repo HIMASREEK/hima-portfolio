@@ -4,24 +4,66 @@ import {
   FaFire,
   FaTrophy,
   FaArrowRight,
+  FaBriefcase,
+  FaPython,
+  FaJs,
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaGitAlt,
+  FaGithub,
+  FaDocker,
+  FaDatabase,
 } from "react-icons/fa";
 
 import {
   SiGeeksforgeeks,
   SiLeetcode,
+  SiDjango,
+  SiFastapi,
+  SiFlask,
+  SiMysql,
+  SiPostgresql,
+  SiMongodb,
 } from "react-icons/si";
 
-const skills = [
-  { name: "Python", image: "/python.png" },
-  { name: "Django", image: "/django.png" },
-  { name: "FastAPI", image: "/fastapi.png" },
-  { name: "MySQL", image: "/mysql.png" },
-  { name: "Git", image: "/git.png" },
-  { name: "React", image: "/react.png" },
-  { name: "JavaScript", image: "/js.png" },
-  { name: "HTML", image: "/html.png" },
-  { name: "CSS", image: "/css.png" },
-  { name: "REST APIs", image: "/rest.png" },
+const skillGroups = [
+  {
+    category: "Languages & Frontend",
+    items: [
+      { name: "Python", icon: <FaPython /> },
+      { name: "JavaScript", icon: <FaJs /> },
+      { name: "React", icon: <FaReact /> },
+      { name: "HTML", icon: <FaHtml5 /> },
+      { name: "CSS", icon: <FaCss3Alt /> },
+    ],
+  },
+  {
+    category: "Backend & APIs",
+    items: [
+      { name: "Django", icon: <SiDjango /> },
+      { name: "Django REST Framework", icon: <SiDjango /> },
+      { name: "FastAPI", icon: <SiFastapi /> },
+      { name: "Flask", icon: <SiFlask /> },
+      { name: "REST APIs", icon: <FaDatabase /> },
+    ],
+  },
+  {
+    category: "Databases",
+    items: [
+      { name: "MySQL", icon: <SiMysql /> },
+      { name: "PostgreSQL", icon: <SiPostgresql /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
+    ],
+  },
+  {
+    category: "Tools & DevOps",
+    items: [
+      { name: "Git", icon: <FaGitAlt /> },
+      { name: "GitHub Actions", icon: <FaGithub /> },
+      { name: "Docker", icon: <FaDocker /> },
+    ],
+  },
 ];
 
 function Skills() {
@@ -37,23 +79,45 @@ function Skills() {
         applications and modern web solutions.
       </p>
 
-      {/* ================= SKILLS ================= */}
+      {/* ================= SKILLS (PILL GROUPS) ================= */}
 
-      <div className="skills-grid">
+      <div className="skills-groups">
 
-        {skills.map((skill) => (
+        {skillGroups.map((group) => (
 
           <div
-            className="skill-card"
-            key={skill.name}
+            className="skill-group"
+            key={group.category}
           >
 
-            <img
-              src={skill.image}
-              alt={skill.name}
-            />
+            <h3 className="skill-group-title">
+              {group.category}
+            </h3>
 
-            <span>{skill.name}</span>
+            <div className="skill-group-box">
+
+              <div className="skills-pills">
+
+                {group.items.map((skill) => (
+
+                  <div
+                    className="skill-pill"
+                    key={skill.name}
+                  >
+
+                    <span className="skill-pill-icon">
+                      {skill.icon}
+                    </span>
+
+                    <span>{skill.name}</span>
+
+                  </div>
+
+                ))}
+
+              </div>
+
+            </div>
 
           </div>
 
@@ -90,6 +154,22 @@ function Skills() {
             <h3>600+</h3>
 
             <p>Problems Solved</p>
+
+          </div>
+
+        </div>
+
+        <div className="divider"></div>
+
+        <div className="stat-box">
+
+          <FaBriefcase className="stat-icon" />
+
+          <div>
+
+            <h3>2</h3>
+
+            <p>Internships Completed</p>
 
           </div>
 
