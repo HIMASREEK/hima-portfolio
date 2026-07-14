@@ -126,7 +126,7 @@ function About() {
                 <span className="timeline-dot" />
                 <div>
                   <strong>Python Development Intern — ShadowFox</strong>
-                  <span className="timeline-date"><Aug2025></Aug2025></span>
+                  <span className="timeline-date">Aug 2025</span>
                 </div>
               </li>
 
