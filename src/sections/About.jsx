@@ -125,8 +125,8 @@ function About() {
               <li>
                 <span className="timeline-dot" />
                 <div>
-                  <strong>Python Development Intern — Sify Digital Services</strong>
-                  <span className="timeline-date">Jan 2026 – Apr 2026</span>
+                  <strong>Python Development Intern — ShadowFox</strong>
+                  <span className="timeline-date"><Aug2025></Aug2025></span>
                 </div>
               </li>
 
